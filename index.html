@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Subayah Islam Manha | Portfolio</title>
+
+  <meta
+    name="description"
+    content="A student portfolio exploring technology, AI, creativity and coding."
+  >
+
+  <style>
+    /* 1. COLOURS AND BASIC SETTINGS */
+    :root {
+      --bg: #080f1f;
+      --panel: #101b31;
+      --blue: #4da3ff;
+      --white: #f4f7ff;
+      --muted: #aab7cc;
+      --border: #263753;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 2. NAVIGATION BAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #080f1ff2;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 1.15rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+    }
+
+    /* 3. GENERAL PAGE LAYOUT */
+    main {
+      width: min(100% - 36px, 1000px);
+      margin: auto;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 8vw, 4.2rem);
+      line-height: 1.15;
+      margin: 18px 0;
+      overflow-wrap: anywhere;
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 5vw, 2.3rem);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .highlight {
+      color: var(--blue);
+    }
+
+    /* 4. HOME SECTION */
+    #home {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 11px 20px;
+      border-radius: 8px;
+      background: var(--blue);
+      color: #06101f;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #8ac4ff;
+      text-decoration: none;
+    }
+
+    /* 5. CARDS FOR SKILLS AND PROJECTS */
+    .grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--blue);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      margin: 5px 4px 0 0;
+      border-radius: 20px;
+      font-size: 0.82rem;
+    }
+
+    /* 6. FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 26px 18px;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    /* 7. SMALL-SCREEN ADJUSTMENTS */
+    @media (max-width: 480px) {
+      header {
+        padding: 14px 18px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      #home {
+        min-height: 65vh;
+      }
+    }
+
+    /* 8. RESPECT REDUCED-MOTION PREFERENCES */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <a class="logo" href="#home">Subayah<span class="highlight">.</span></a>
+
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home">
+      <span class="eyebrow">Student • Future Learner</span>
+
+      <h1>
+        Hi, I'm Subayah<br>
+        <span class="highlight">Exploring Technology.</span>
+      </h1>
+
+      <p class="hero-text">
+        I'm a Class 7 student interested in artificial intelligence,
+        technology, creativity and learning to code.
+        This is where I share my projects, skills and learning journey.
+      </p>
+
+      <a class="button" href="#projects">Explore My Work &rarr;</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <span class="eyebrow">A Little About Me</span>
+      <h2>Curious by nature. <span class="highlight">Ready to learn.</span></h2>
+
+      <p>
+        I'm a student building my knowledge of technology one step at a time.
+        I'm especially interested in artificial intelligence and data science.
+      </p>
+
+      <p>
+        I believe that curiosity, consistent practice and creativity
+        can turn ideas into useful projects. This portfolio will grow
+        as I learn new skills and gain experience.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <span class="eyebrow">What I Bring</span>
+      <h2>My <span class="highlight">Skills</span></h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Technology</h3>
+          <p>Basic computer skills and an interest in AI.</p>
+          <span class="tag">Technology</span>
+          <span class="tag">AI Exploration</span>
+        </article>
+
+        <article class="card">
+          <h3>Creative Thinking</h3>
+          <p>Exploring ideas and finding creative ways to present them.</p>
+          <span class="tag">Creativity</span>
+          <span class="tag">Problem Solving</span>
+        </article>
+
+        <article class="card">
+          <h3>Teamwork</h3>
+          <p>Willingness to collaborate, listen and learn from others.</p>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Curiosity</span>
+        </article>
+
+        <article class="card">
+          <h3>Learning to Code</h3>
+          <p>Beginning my journey with HTML and CSS.</p>
+          <span class="tag">Currently Learning</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <span class="eyebrow">Things I've Worked On</span>
+      <h2>My <span class="highlight">Projects</span></h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>VIBES</h3>
+          <p>
+            A small business project exploring product presentation,
+            branding, customer communication and entrepreneurship.
+          </p>
+          <span class="tag">Business</span>
+          <span class="tag">Branding</span>
+        </article>
+
+        <article class="card">
+          <h3>Creative Work</h3>
+          <p>
+            A collection of selected creative projects and design work.
+            More examples will be added as they are prepared.
+          </p>
+          <span class="tag">Creativity</span>
+          <span class="tag">Design</span>
+        </article>
+
+        <article class="card">
+          <h3>My First Website</h3>
+          <p>
+            This portfolio is my starting point for learning web
+            development and building projects of my own.
+          </p>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+      <span class="eyebrow">Milestones</span>
+      <h2>Achievements & <span class="highlight">Growth</span></h2>
+
+      <div class="card">
+        <p>
+          I have participated in academic and creative activities
+          and earned recognition in selected areas.
+        </p>
+        <p>
+          I will add specific awards, dates and details as I organize
+          my achievements.
+        </p>
+      </div>
+    </section>
+
+    <!-- LEARNING JOURNEY -->
+    <section id="learning">
+      <span class="eyebrow">What's Next?</span>
+      <h2>My Learning <span class="highlight">Journey</span></h2>
+
+      <div class="card">
+        <p>01 — Learn HTML and CSS fundamentals.</p>
+        <p>02 — Build and improve small coding projects.</p>
+        <p>03 — Explore JavaScript and interactive websites.</p>
+        <p>04 — Gradually explore AI and data science.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Built with curiosity by Subayah · 2026</p>
+    <p>Learning something new, one step at a time.</p>
+  </footer>
+
+</body>
+</html>
